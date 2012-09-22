@@ -7,7 +7,6 @@ import static com.badlogic.gdx.scenes.scene2d.actions.Actions.sequence;
 
 import com.aquasheep.GTFTSTG.GTFTSTG;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.Texture.TextureFilter;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
 import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
@@ -25,17 +24,6 @@ public class SplashScreen extends AbstractScreen {
 	}
 	
 	@Override
-	public void show() {
-		super.show();
-		
-		//Load splash image
-		splashTexture = new Texture("images/splash.png");
-		
-		//Set filter for stretching
-		splashTexture.setFilter(TextureFilter.Linear, TextureFilter.Linear);
-	}
-	
-	@Override
 	public void resize(int width, int height) {
 		super.resize(width, height);
 		
@@ -45,7 +33,7 @@ public class SplashScreen extends AbstractScreen {
 		//In the image atlas, the splash image begins at (0,0) in top-left
 		//and ends at 512x301
 		// retrieve the splash image's region from the atlas
-        AtlasRegion splashRegion = getAtlas("splash").findRegion("splash-image");
+        AtlasRegion splashRegion = getAtlas("splash").findRegion("splash");
         Drawable splashDrawable = new TextureRegionDrawable(splashRegion);
 				
 		//Create the splash image Actor and set its size
@@ -59,7 +47,7 @@ public class SplashScreen extends AbstractScreen {
 		splashImage.getColor().a = 0f;
 		
 		//Configure the fade-in fade-out effect on splash image
-		splashImage.addAction(sequence(fadeIn(0.75f),delay(1.75f,fadeOut(0.75f)), 
+		splashImage.addAction(sequence(fadeIn(0.75f),delay(5f,fadeOut(0.75f)), 
 			new Action() {
 				public boolean act (float delta) {
 					game.setScreen(new GameScreen(game));
