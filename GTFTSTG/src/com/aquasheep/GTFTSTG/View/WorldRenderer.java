@@ -3,6 +3,7 @@ package com.aquasheep.GTFTSTG.View;
 import com.aquasheep.GTFTSTG.GTFTSTG;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.badlogic.gdx.scenes.scene2d.Stage;
 
 /** Renders items onto screen */
 public class WorldRenderer {
@@ -32,5 +33,4 @@ public class WorldRenderer {
 		}
 		debugRenderer.end();
 	}
-	
 }
