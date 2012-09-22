@@ -60,6 +60,7 @@ public abstract class AbstractScreen implements Screen {
 		
 		//Resize the stage
 		stage.setViewport(width, height, true);
+		game.setSize(width,height);
 	}
 
 	@Override

@@ -11,6 +11,8 @@ public class GTFTSTG extends Game {
 	public final boolean DEBUG = true;
 	public Item[] items;
 	private Baby baby;
+	private int screenWidth, screenHeight;
+	
 	
 	@Override
 	public void create() {
@@ -24,6 +26,19 @@ public class GTFTSTG extends Game {
 
 	public Baby getBaby() {
 		return baby;
+	}
+
+	public void setSize(int width, int height) {
+		this.screenWidth = width;
+		this.screenHeight = height;
+	}
+	
+	public int getWidth() {
+		return screenWidth;
+	}
+	
+	public int getHeight() {
+		return screenHeight;
 	}
 
 }

@@ -1,8 +1,9 @@
 package com.aquasheep.GTFTSTG.Items;
 
 import com.aquasheep.GTFTSTG.GTFTSTG;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.Rectangle;
-import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 
@@ -26,6 +27,8 @@ public abstract class Item extends Actor {
 		this.game = theGame;
 		this.name = theName;
 		this.pos = pos;
+		this.setPosition(pos.x, pos.y);
+		this.setSize(pos.width, pos.height);
 		//TODO make collision rectangle (pos) based on image size
 		event = new Action() {
 			@Override
@@ -48,9 +51,18 @@ public abstract class Item extends Actor {
 	}
 
 	public boolean selected(float mouseX, float mouseY) {
-		if (pos.contains(mouseX,mouseY)) {
+		if (pos.contains(mouseX,game.getHeight()-mouseY)) {
 			return true;
 		}
 		return false;
+	}
+	
+	@Override
+	public void draw(SpriteBatch batch, float alpha) {
+		
+	}
+
+	public Rectangle getPos() {
+		return pos;
 	}
 }
