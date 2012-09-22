@@ -40,6 +40,7 @@ public abstract class Item extends Actor {
 		};
 	}
 	
+	/** Activates particular event associated with the Item. Called when an item is clicked*/
 	public void activate() {
 		this.addAction(event);
 	}
