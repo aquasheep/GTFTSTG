@@ -41,7 +41,6 @@ public abstract class AbstractScreen implements Screen {
 	@Override
 	public void show() {
 		Gdx.app.log(GTFTSTG.LOG,"Showing screen "+getName());
-		Gdx.input.setInputProcessor(stage);
 	}
 	
 	@Override
