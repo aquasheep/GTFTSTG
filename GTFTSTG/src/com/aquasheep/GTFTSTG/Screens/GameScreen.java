@@ -30,9 +30,12 @@ public class GameScreen extends AbstractScreen {
 				counter=0;
 			}
 		}
+		//Draw background
 		batch.begin();
+		//Compensate for bottom of background being transparent
 		batch.draw(background,0,-(1024-768));
 		batch.end();
+		//Draw everything else
 		stage.act(delta);
 		stage.draw();
 	}
@@ -40,6 +43,8 @@ public class GameScreen extends AbstractScreen {
 	@Override
 	public void resize(int width, int height) {
 		super.resize(width, height);
+		//TODO reposition items based on size changes
+		game.setSize(width,height);
 	}
 	
 }

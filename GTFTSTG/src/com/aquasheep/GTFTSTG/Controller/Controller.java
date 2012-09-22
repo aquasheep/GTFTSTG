@@ -13,7 +13,6 @@ public class Controller implements InputProcessor {
 	
 	@Override
 	public boolean keyDown(int keycode) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
@@ -36,6 +35,8 @@ public class Controller implements InputProcessor {
 				game.items[i].activate();
 			}
 		}
+		if (game.DEBUG)
+			System.out.println("Position: "+screenX+", "+screenY);
 		return false;
 	}
 

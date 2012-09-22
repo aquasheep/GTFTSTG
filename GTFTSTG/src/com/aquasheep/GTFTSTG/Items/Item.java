@@ -71,4 +71,10 @@ public abstract class Item extends Actor {
 	public Rectangle getPos() {
 		return pos;
 	}
+	
+	public void setPos(float x, float y) {
+		pos.x = x;
+		pos.y = y;
+		this.setPosition(x,y);
+	}
 }

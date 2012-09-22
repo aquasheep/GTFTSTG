@@ -6,7 +6,7 @@ repeat: none
 bottle
   rotate: false
   xy: 1, 1
-  size: 32, 32
-  orig: 32, 32
+  size: 22, 66
+  orig: 22, 66
   offset: 0, 0
   index: -1

@@ -17,11 +17,14 @@ public class GTFTSTG extends Game {
 	@Override
 	public void create() {
 		baby = new Baby();
-		//Add all items to screen
+		//Add all items to screen	
 		items = new Item[1];
-		items[0] = new Bottle(this,100,100);
-		
 		setScreen(new SplashScreen(this));
+		//TODO Soft-code image positions based on screen size
+			//Perhaps possible by having a set of multipliers and applying them to screen size whenever setSize is called
+			//Another possibility is to bind items to background as one texture and access relative coords
+		//Must substract from screenHeight to convert topleft to bottomleft and then subtract image height
+		items[0] = new Bottle(this,307,screenHeight-475-40);
 	}
 
 	public Baby getBaby() {
