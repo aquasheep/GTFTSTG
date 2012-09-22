@@ -1,6 +1,7 @@
 package com.aquasheep.GTFTSTG.Items;
 
 import com.aquasheep.GTFTSTG.GTFTSTG;
+import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.Actor;
@@ -10,7 +11,7 @@ public abstract class Item extends Actor {
 
 	protected final GTFTSTG game;
 	protected final String name;
-	protected Vector2 pos;
+	protected Rectangle pos;
 	protected final Action event;
 	protected float sleepChance;
 	
@@ -21,10 +22,11 @@ public abstract class Item extends Actor {
 	 * @param pos  - position to initially draw the item
 	 * @param event - scene2d.Action to fulfill when item is clicked 
 	 */
-	public Item(GTFTSTG theGame, String theName, Vector2 pos) {
+	public Item(GTFTSTG theGame, String theName, Rectangle pos) {
 		this.game = theGame;
 		this.name = theName;
 		this.pos = pos;
+		//TODO make collision rectangle (pos) based on image size
 		event = new Action() {
 			@Override
 			public boolean act(float delta) {
@@ -43,5 +45,12 @@ public abstract class Item extends Actor {
 	/** Activates particular event associated with the Item. Called when an item is clicked*/
 	public void activate() {
 		this.addAction(event);
+	}
+
+	public boolean selected(float mouseX, float mouseY) {
+		if (pos.contains(mouseX,mouseY)) {
+			return true;
+		}
+		return false;
 	}
 }

@@ -17,7 +17,7 @@ public class GTFTSTG extends Game {
 		baby = new Baby();
 		//Add all items to screen
 		items = new Item[1];
-		items[0] = new Bottle(this,100,100);
+		items[0] = new Bottle(this,100,100,200,200);
 		
 		setScreen(new SplashScreen(this));
 	}
