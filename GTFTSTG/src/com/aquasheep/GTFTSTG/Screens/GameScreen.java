@@ -32,7 +32,7 @@ public class GameScreen extends AbstractScreen {
 			}
 		}
 		super.render(delta);
-		renderer.debugRender(delta);
+		renderer.render(delta);
 	}
 	
 }

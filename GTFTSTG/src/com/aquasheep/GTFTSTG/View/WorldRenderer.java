@@ -18,7 +18,11 @@ public class WorldRenderer {
 	}
 	
 	public void render(float delta) {
-		
+		batch.begin();
+		for (int i = 0; i < game.items.length; ++i) {
+			game.items[i].draw(batch, 1f);
+		}
+		batch.end();
 	}
 	
 	public void debugRender(float delta) {

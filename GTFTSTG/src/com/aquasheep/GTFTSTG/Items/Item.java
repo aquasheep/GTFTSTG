@@ -1,8 +1,10 @@
 package com.aquasheep.GTFTSTG.Items;
 
 import com.aquasheep.GTFTSTG.GTFTSTG;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.Actor;
@@ -15,6 +17,8 @@ public abstract class Item extends Actor {
 	protected Rectangle pos;
 	protected final Action event;
 	protected float sleepChance;
+	protected static final TextureAtlas ATLAS = new TextureAtlas(Gdx.files.internal("image-atlases/items.pack"));
+	protected TextureRegion texture;
 	
 	/**
 	 * Creates a new Item.
@@ -23,12 +27,14 @@ public abstract class Item extends Actor {
 	 * @param pos  - position to initially draw the item
 	 * @param event - scene2d.Action to fulfill when item is clicked 
 	 */
-	public Item(GTFTSTG theGame, String theName, Rectangle pos) {
+	public Item(GTFTSTG theGame, String theName, float x, float y) {
 		this.game = theGame;
 		this.name = theName;
-		this.pos = pos;
+		texture = ATLAS.findRegion(name);
+		this.setSize(texture.getRegionWidth(), texture.getRegionHeight());
+		this.pos = new Rectangle(x,y,texture.getRegionWidth(),texture.getRegionHeight());
 		this.setPosition(pos.x, pos.y);
-		this.setSize(pos.width, pos.height);
+		
 		//TODO make collision rectangle (pos) based on image size
 		event = new Action() {
 			@Override
@@ -59,7 +65,7 @@ public abstract class Item extends Actor {
 	
 	@Override
 	public void draw(SpriteBatch batch, float alpha) {
-		
+		batch.draw(texture,pos.x,pos.y);
 	}
 
 	public Rectangle getPos() {
