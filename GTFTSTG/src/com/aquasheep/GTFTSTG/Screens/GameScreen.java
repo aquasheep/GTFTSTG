@@ -3,10 +3,12 @@ package com.aquasheep.GTFTSTG.Screens;
 import com.aquasheep.GTFTSTG.GTFTSTG;
 import com.aquasheep.GTFTSTG.Controller.Controller;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Texture;
 
 public class GameScreen extends AbstractScreen {
 	
 	private int counter = 0;
+	private Texture background;
 	
 	public GameScreen(GTFTSTG game) {
 		super(game);
@@ -16,6 +18,7 @@ public class GameScreen extends AbstractScreen {
 		}
 		//Create controller and set as input processor
 		Gdx.input.setInputProcessor(new Controller(game));
+		background = new Texture("images/BabyRoom.png");
 	}
 	
 	@Override
@@ -27,7 +30,11 @@ public class GameScreen extends AbstractScreen {
 				counter=0;
 			}
 		}
-		super.render(delta);
+		batch.begin();
+		batch.draw(background,0,-(1024-768));
+		batch.end();
+		stage.act(delta);
+		stage.draw();
 	}
 	
 	@Override
