@@ -6,18 +6,24 @@ import com.badlogic.gdx.graphics.GL20;
 
 public class GameScreen extends AbstractScreen {
 	
+	private int counter = 0;
+	
 	public GameScreen(GTFTSTG game) {
 		super(game);
+		//Add all items to stage
+		for (int i = 0; i < game.items.length; ++i) {
+			stage.addActor(game.items[i]);
+		}
 	}
 	
 	@Override
 	public void render(float delta) {
+		++counter;
 		if (game.DEBUG) {
-			Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-			Gdx.gl.glClearColor(200,30,150,255);
-			
-			game.items[0].activate();
+			if (counter%((int)(1/delta))==0)
+				game.items[0].activate();
 		}
+		super.render(delta);
 	}
 	
 }
