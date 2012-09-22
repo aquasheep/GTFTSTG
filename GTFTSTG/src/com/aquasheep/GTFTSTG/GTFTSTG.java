@@ -4,6 +4,8 @@ import com.aquasheep.GTFTSTG.Items.Bottle;
 import com.aquasheep.GTFTSTG.Items.Item;
 import com.aquasheep.GTFTSTG.Screens.SplashScreen;
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Sound;
 
 public class GTFTSTG extends Game {
 	
@@ -12,7 +14,7 @@ public class GTFTSTG extends Game {
 	public Item[] items;
 	private Baby baby;
 	private int screenWidth, screenHeight;
-	
+	public Sound backgroundSound;
 	
 	@Override
 	public void create() {

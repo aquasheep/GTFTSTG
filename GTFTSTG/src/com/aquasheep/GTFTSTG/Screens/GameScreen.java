@@ -3,6 +3,7 @@ package com.aquasheep.GTFTSTG.Screens;
 import com.aquasheep.GTFTSTG.GTFTSTG;
 import com.aquasheep.GTFTSTG.Controller.Controller;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 
 public class GameScreen extends AbstractScreen {
@@ -19,17 +20,13 @@ public class GameScreen extends AbstractScreen {
 		//Create controller and set as input processor
 		Gdx.input.setInputProcessor(new Controller(game));
 		background = new Texture("images/BabyRoom.png");
+		game.backgroundSound = Gdx.audio.newSound(Gdx.files.internal("sounds/background.ogg"));
+		game.backgroundSound.loop(0.5f);
 	}
 	
 	@Override
 	public void render(float delta) {
 		++counter;
-		if (game.DEBUG) {
-			if (counter%((int)(1/delta))==0) {
-				//game.items[0].activate();
-				counter=0;
-			}
-		}
 		//Draw background
 		batch.begin();
 		//Compensate for bottom of background being transparent
@@ -38,6 +35,7 @@ public class GameScreen extends AbstractScreen {
 		//Draw everything else
 		stage.act(delta);
 		stage.draw();
+		game.getBaby().update(delta);
 	}
 	
 	@Override

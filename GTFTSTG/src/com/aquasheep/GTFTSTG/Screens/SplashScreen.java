@@ -24,6 +24,11 @@ public class SplashScreen extends AbstractScreen implements InputProcessor {
 	}
 	
 	@Override
+	public void show() {
+		super.show();
+	}
+	
+	@Override
 	public void resize(int width, int height) {
 		super.resize(width, height);
 		
