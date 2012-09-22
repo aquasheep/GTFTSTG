@@ -2,7 +2,6 @@ package com.aquasheep.GTFTSTG.Screens;
 
 import com.aquasheep.GTFTSTG.GTFTSTG;
 import com.aquasheep.GTFTSTG.Controller.Controller;
-import com.aquasheep.GTFTSTG.View.WorldRenderer;
 import com.badlogic.gdx.Gdx;
 
 public class GameScreen extends AbstractScreen {
@@ -17,7 +16,6 @@ public class GameScreen extends AbstractScreen {
 		}
 		//Create controller and set as input processor
 		Gdx.input.setInputProcessor(new Controller(game));
-		//Make new renderer
 	}
 	
 	@Override

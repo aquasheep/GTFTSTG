@@ -3,16 +3,15 @@ package com.aquasheep.GTFTSTG.View;
 import com.aquasheep.GTFTSTG.GTFTSTG;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
-import com.badlogic.gdx.scenes.scene2d.Stage;
 
 /** Renders items onto screen */
-public class WorldRenderer {
+public class DebugRenderer {
 
 	private GTFTSTG game;
 	private SpriteBatch batch;
 	private ShapeRenderer debugRenderer;
 	
-	public WorldRenderer(GTFTSTG game, SpriteBatch batch) {
+	public DebugRenderer(GTFTSTG game, SpriteBatch batch) {
 		this.game = game;
 		this.batch = batch;
 		this.debugRenderer = new ShapeRenderer();

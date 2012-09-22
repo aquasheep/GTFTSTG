@@ -1,7 +1,6 @@
 package com.aquasheep.GTFTSTG.Items;
 
 import com.aquasheep.GTFTSTG.GTFTSTG;
-import com.badlogic.gdx.math.Rectangle;
 
 public class Bottle extends Item {
 	
