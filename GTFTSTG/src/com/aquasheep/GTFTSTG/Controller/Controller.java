@@ -11,7 +11,6 @@ public class Controller implements InputProcessor {
 		this.game = game;
 	}
 	
-	
 	@Override
 	public boolean keyDown(int keycode) {
 		// TODO Auto-generated method stub

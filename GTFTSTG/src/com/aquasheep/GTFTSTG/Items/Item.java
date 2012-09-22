@@ -36,8 +36,8 @@ public abstract class Item extends Actor {
 					System.out.println("Baby sleeping: "+game.getBaby().attemptSleep((int)(sleepChance*1000)));
 				}
 				//playsound(name)
-				//game.baby.sleep(sleepChance)
-				return false;
+				//game.baby.attemptSleep(sleepChance)
+				return true;
 			}
 		};
 	}
