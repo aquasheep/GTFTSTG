@@ -36,7 +36,7 @@ public class Controller implements InputProcessor {
 			}
 		}
 		if (game.DEBUG)
-			System.out.println("Position: "+screenX+", "+screenY);
+			System.out.println("Position: "+(float)screenX/game.getWidth()+", "+(game.getHeight()-(float)screenY)/game.getHeight());
 		return false;
 	}
 
