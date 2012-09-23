@@ -42,7 +42,7 @@ public abstract class Item extends Actor {
 		this.setPosition(pos.x, pos.y);
 		sound = Gdx.audio.newSound(Gdx.files.internal("sounds/"+name+".ogg"));
 		this.soundLength = soundLength;
-		sleepChance = (float)Math.random()/10;
+		sleepChance = (float)Math.random()/10+.01f;
 		//TODO make collision rectangle (pos) based on image size	
 	}
 	

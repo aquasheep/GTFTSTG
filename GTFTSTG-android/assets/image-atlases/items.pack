@@ -17,18 +17,25 @@ diaper
   orig: 68, 68
   offset: 0, 0
   index: -1
-mirror
+bottle
   rotate: false
-  xy: 133, 69
-  size: 56, 58
-  orig: 56, 58
+  xy: 133, 61
+  size: 60, 66
+  orig: 60, 66
   offset: 0, 0
   index: -1
 rattle
   rotate: false
-  xy: 191, 83
+  xy: 195, 83
   size: 60, 44
   orig: 60, 44
+  offset: 0, 0
+  index: -1
+mirror
+  rotate: false
+  xy: 133, 1
+  size: 56, 58
+  orig: 56, 58
   offset: 0, 0
   index: -1
 actionFigure
@@ -38,38 +45,31 @@ actionFigure
   orig: 27, 30
   offset: 0, 0
   index: -1
-pacifier
-  rotate: false
-  xy: 63, 22
-  size: 46, 35
-  orig: 46, 35
-  offset: 0, 0
-  index: -1
-camera
-  rotate: false
-  xy: 111, 22
-  size: 38, 35
-  orig: 38, 35
-  offset: 0, 0
-  index: -1
-bottle
-  rotate: false
-  xy: 151, 1
-  size: 22, 66
-  orig: 22, 66
-  offset: 0, 0
-  index: -1
 phone
   rotate: false
-  xy: 175, 9
+  xy: 191, 1
   size: 20, 58
   orig: 20, 58
   offset: 0, 0
   index: -1
 keys
   rotate: false
-  xy: 197, 56
+  xy: 63, 32
   size: 40, 25
   orig: 40, 25
+  offset: 0, 0
+  index: -1
+camera
+  rotate: false
+  xy: 213, 46
+  size: 38, 35
+  orig: 38, 35
+  offset: 0, 0
+  index: -1
+pacifier
+  rotate: false
+  xy: 105, 39
+  size: 23, 18
+  orig: 23, 18
   offset: 0, 0
   index: -1

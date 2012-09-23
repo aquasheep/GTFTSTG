@@ -31,7 +31,7 @@ public class Keys extends Item {
 				}
 				else {
 					sound2.play();
-					soundLength = 2.6f;
+					soundLength = 1f;
 				}
 				return true;
 			}
