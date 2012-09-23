@@ -8,8 +8,11 @@ import com.badlogic.gdx.graphics.Texture;
 
 public class GameScreen extends AbstractScreen {
 	
-	private int counter = 0;
 	private Texture background;
+	private Sound sirens;
+	private Sound helicopter;
+	private Sound carAlarm;
+	private double randomEventCounter;
 	
 	public GameScreen(GTFTSTG game) {
 		super(game);
@@ -22,11 +25,26 @@ public class GameScreen extends AbstractScreen {
 		background = new Texture("images/BabyRoom.png");
 		game.backgroundSound = Gdx.audio.newSound(Gdx.files.internal("sounds/background.ogg"));
 		game.backgroundSound.loop(0.5f);
+		sirens = Gdx.audio.newSound(Gdx.files.internal("sounds/police.ogg"));
+		helicopter = Gdx.audio.newSound(Gdx.files.internal("sounds/helicopter.ogg"));
+		carAlarm = Gdx.audio.newSound(Gdx.files.internal("sounds/carAlarm.ogg"));
 	}
 	
 	@Override
 	public void render(float delta) {
-		++counter;
+		randomEventCounter = Math.random()*100000;
+		if (randomEventCounter>99990) {
+			sirens.play();
+		}
+		
+		if (randomEventCounter>20 && randomEventCounter<30) {
+			helicopter.play();
+		}
+		
+		if (randomEventCounter<10) {
+			carAlarm.play();
+		}
+			
 		//Draw background
 		batch.begin();
 		//Compensate for bottom of background being transparent
