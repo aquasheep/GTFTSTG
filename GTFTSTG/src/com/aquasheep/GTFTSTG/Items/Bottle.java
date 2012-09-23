@@ -8,7 +8,6 @@ public class Bottle extends Item {
 	
 	public Bottle(GTFTSTG game, float leftX, float botY) {
 		super(game, "bottle", leftX, botY, soundLength);
-		sleepChance = 0.1f;
 	}
 
 }

@@ -3,10 +3,73 @@ items.png
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-bottle
+clown
+  rotate: false
+  xy: 1, 33
+  size: 60, 94
+  orig: 60, 94
+  offset: 0, 0
+  index: -1
+diaper
+  rotate: false
+  xy: 63, 59
+  size: 68, 68
+  orig: 68, 68
+  offset: 0, 0
+  index: -1
+mirror
+  rotate: false
+  xy: 133, 69
+  size: 56, 58
+  orig: 56, 58
+  offset: 0, 0
+  index: -1
+rattle
+  rotate: false
+  xy: 191, 83
+  size: 60, 44
+  orig: 60, 44
+  offset: 0, 0
+  index: -1
+actionFigure
   rotate: false
   xy: 1, 1
+  size: 27, 30
+  orig: 27, 30
+  offset: 0, 0
+  index: -1
+pacifier
+  rotate: false
+  xy: 63, 22
+  size: 46, 35
+  orig: 46, 35
+  offset: 0, 0
+  index: -1
+camera
+  rotate: false
+  xy: 111, 22
+  size: 38, 35
+  orig: 38, 35
+  offset: 0, 0
+  index: -1
+bottle
+  rotate: false
+  xy: 151, 1
   size: 22, 66
   orig: 22, 66
+  offset: 0, 0
+  index: -1
+phone
+  rotate: false
+  xy: 175, 9
+  size: 20, 58
+  orig: 20, 58
+  offset: 0, 0
+  index: -1
+keys
+  rotate: false
+  xy: 197, 56
+  size: 40, 25
+  orig: 40, 25
   offset: 0, 0
   index: -1
