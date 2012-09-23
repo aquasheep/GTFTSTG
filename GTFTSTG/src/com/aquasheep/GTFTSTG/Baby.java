@@ -10,7 +10,7 @@ public class Baby {
 	public Sound cry,laugh,sleep;
 	
 	public Baby() {
-		cry = Gdx.audio.newSound(Gdx.files.internal("sounds/cry.ogg"));
+		cry = Gdx.audio.newSound(Gdx.files.internal("sounds/cry.mp3"));
 		laugh = Gdx.audio.newSound(Gdx.files.internal("sounds/laugh.ogg"));
 		sleep = Gdx.audio.newSound(Gdx.files.internal("sounds/sleep.ogg"));
 		cry.loop();

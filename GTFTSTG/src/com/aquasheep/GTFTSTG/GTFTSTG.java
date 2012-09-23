@@ -35,7 +35,7 @@ public class GTFTSTG extends Game {
 			//Perhaps possible by having a set of multipliers and applying them to screen size whenever setSize is called
 			//Another possibility is to bind items to background as one texture and access relative coords
 		//Must substract from screenHeight to convert topleft to bottomleft and then subtract image height
-		items[0] = new Bottle(this,(int)(0.3065*screenWidth),(int)(0.3159*screenHeight));
+		items[0] = new Bottle(this,(int)(0.3065*screenWidth),(int)(0.2859*screenHeight));
 		items[1] = new Clown(this,(int)(0.5098*screenWidth),(int)(0.3311*screenHeight));
 		items[2] = new ActionFigure(this,(int)(0.5499*screenWidth),(int)(0.1619*screenHeight));
 		items[3] = new Mirror(this,(int)(0.9256*screenWidth),(int)(0.3514*screenHeight));
